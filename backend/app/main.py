@@ -15,3 +15,7 @@ app.add_middleware(
 @app.get("/health")
 def health():
     return {"status": "running"}
+
+@app.get("/")  # <-- Add this
+def root():
+    return {"message": "Backend is live"}
